@@ -1,0 +1,10 @@
+Aim: Write a program to find first and follow of the grammar symbols from a given grammar.
+Theory: 
+FIRST and FOLLOW are two functions associated with grammar that help us fill in the entries of an M-table.
+FIRST ()− It is a function that gives the set of terminals that begin the strings derived from the production rule.
+A symbol c is in FIRST (α) if and only if α ⇒ cβ for some sequence β of grammar symbols.
+A terminal symbol a is in FOLLOW (N) if and only if there is a derivation from the start symbol S of the grammar such that S ⇒ αNαβ, where α and β are a (possible empty) sequence of grammar symbols. In other words, a terminal c is in FOLLOW (N) if c can follow N at some point in a derivation.
+Benefit of FIRST ( ) and FOLLOW ( )
+    • It can be used to prove the LL (K) characteristic of grammar.
+    • It can be used to promote the construction of predictive parsing tables.
+    • It provides selection information for recursive descent parsers.

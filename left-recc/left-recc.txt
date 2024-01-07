@@ -1,0 +1,15 @@
+Aim: Write a program to remove left recursion from a grammar.
+
+Theory: A Grammar G (V, T, P, S) is left recursive if it has a production in the form.
+A → A α |β.
+The above Grammar is left recursive because the left of production is occurring at a first position on the right side of production. It can eliminate left recursion by replacing a pair of production with
+A → βA′
+A → αA′|ϵ
+
+This type of recursion is also called Immediate Left Recursion.
+In Left Recursive Grammar, expansion of A will generate Aα, Aαα, Aααα at each step, causing it to enter into an infinite loop
+The general form for left recursion is
+A → Aα1|Aα2| … . |Aαm|β1|β2| … . . βn
+can be replaced by
+A → β1A′|β2A′| … . . | … . . |βnA′
+A → α1A′|α2A′| … . . |αmA′|ε
